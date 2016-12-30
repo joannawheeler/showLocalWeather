@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Show Local Weather</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row text-center">
+        <h5>Free Code Camp</h5>
+        <h5>Show Local Weather</h5>
+      </div>
+      <div class="row text-center">
+         -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>IP-API.com Geo Location Demo</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <table id="GeoResults"></table>
+        <script>
+        $(document).ready(function() {
+        $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+            var table_body = "";
+            $.each(data, function(k, v) {
+                table_body += "<tr><td>" + k + "</td><td><b>" + v + "</b></td></tr>";
+            });
+            $("#GeoResults").html(JSON.stringify(table_body));
+        });
+    })
+        </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+   	<script src="script.js"></script>
+    </body>
+</html>
