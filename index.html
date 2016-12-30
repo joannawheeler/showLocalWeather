@@ -17,27 +17,36 @@
          -->
 
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <title>IP-API.com Geo Location Demo</title>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Local Weather</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        <table id="GeoResults"></table>
-        <script>
-        $(document).ready(function() {
-        $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
-            var table_body = "";
-            $.each(data, function(k, v) {
-                table_body += "<tr><td>" + k + "</td><td><b>" + v + "</b></td></tr>";
-            });
-            $("#GeoResults").html(JSON.stringify(table_body));
-        });
-    })
-        </script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-   	<script src="script.js"></script>
+      <div class="container-fluid">
+        <div class = "row text-center">
+          <h3>The Local Weather</h3>
+        </div>
+        <div class = "row text-center">
+          <div class = "city">
+        </div>
+        <div class = "row text-center">
+          <div class = "temp">
+        </div>
+        <div class = "row text-center">
+          <div class = "forecast">
+        </div>
+        <div class = "row text-center">
+          <div class = "weatherIcon">
+          </div>
+        </div>
+        <div class = "iconUrl">
+          </div>
+        </div>
+      </div>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src = "script.js"></script>
     </body>
 </html>
